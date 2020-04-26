@@ -42,7 +42,7 @@ Item {
 
         SimItem {
             color: UbuntuColors.blue
-            title.text: "SIM #%1".arg(simNb+1)
+            title.text: i18n.tr("SIM #%1").arg(simNb+1)
             title.color: theme.palette.normal.raised //always white to provide better contrast on blue background
         }
 
@@ -59,15 +59,15 @@ Item {
         }
         SimItem {
             title.text: simMng.subscriberIdentity === undefined ? i18n.tr("empty") : simMng.subscriberIdentity
-            subtitle.text: i18n.tr("SubscriberIdentity")
+            subtitle.text: i18n.tr("SubscriberIdentity (IMSI)")
         }
         SimItem {
             title.text: simMng.mobileCountryCode === undefined ? i18n.tr("empty") : simMng.mobileCountryCode
-            subtitle.text: i18n.tr("MobileCountryCode")
+            subtitle.text: i18n.tr("MobileCountryCode (MCC)")
         }
         SimItem {
             title.text: simMng.mobileNetworkCode === undefined ? i18n.tr("empty") : simMng.mobileNetworkCode
-            subtitle.text: i18n.tr("MobileNetworkCode")
+            subtitle.text: i18n.tr("MobileNetworkCode (MNC)")
         }
        // SimItem {
        //     title.text: simMng.serviceProviderName
@@ -97,8 +97,6 @@ Item {
                 id: newNumber
                 placeholderText: "+33123232432"
                 text: (simMng.subscriberNumbers[0].length > 0) ? simMng.subscriberNumbers[0]: undefined
-                //onFocusChanged: if (focus) { feedbackText.text = "" }
-
             }
             Row {
                 id: row
@@ -116,9 +114,8 @@ Item {
                     onClicked: {
 
                        var phoneNumbers = PhoneNumber.PhoneUtils.matchInText(newNumber.text, getCountryCode())
-                       if (phoneNumbers.length===0) {
+                       if (phoneNumbers.length===0 || phoneNumbers[0]!=="+") {
                            feedbackText.text = i18n.tr("Wrong number format")
-                           //TODO: add check if there is no + at the first position
                        } else {
 
                            if (secondConfirmation) {
@@ -132,9 +129,7 @@ Item {
                                feedbackText.wrapMode = Text.WordWrap
                                feedbackText.color = "green"
                            }
-
                        }
-
                     }
                 }
             }
