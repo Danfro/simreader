@@ -36,9 +36,6 @@ Item {
             return localeName.substr(localeName.length - 2, 2)
         }
 
-
-
-
     Column {
         id:simInfoList
         width: parent.width
@@ -46,43 +43,40 @@ Item {
         SimItem {
             color: UbuntuColors.blue
             title.text: "SIM #%1".arg(simNb+1)
+            title.color: theme.palette.normal.raised //always white to provide better contrast on blue background
         }
 
         SimItem {
-            title.text: simMng.subscriberNumbers[0]
-            subtitle.text: "SubscriberNumber"
+            title.text: simMng.subscriberNumbers[0] === undefined ? i18n.tr("empty") : simMng.subscriberNumbers[0]
+            subtitle.text: i18n.tr("SubscriberNumber")
             Button {
                 anchors.right: parent.right
+                anchors.rightMargin: units.gu(2)
                 anchors.verticalCenter: parent.verticalCenter
-                text: "change it"
+                text: i18n.tr("change number")
                 onClicked: PopupUtils.open(dialog)
             }
         }
         SimItem {
-            title.text: simMng.subscriberIdentity
-            subtitle.text: "SubscriberIdentity"
+            title.text: simMng.subscriberIdentity === undefined ? i18n.tr("empty") : simMng.subscriberIdentity
+            subtitle.text: i18n.tr("SubscriberIdentity")
         }
         SimItem {
-            title.text: simMng.mobileCountryCode
-            subtitle.text: "MobileCountryCode"
+            title.text: simMng.mobileCountryCode === undefined ? i18n.tr("empty") : simMng.mobileCountryCode
+            subtitle.text: i18n.tr("MobileCountryCode")
         }
         SimItem {
-            title.text: simMng.mobileNetworkCode
-            subtitle.text: "MobileNetworkCode"
+            title.text: simMng.mobileNetworkCode === undefined ? i18n.tr("empty") : simMng.mobileNetworkCode
+            subtitle.text: i18n.tr("MobileNetworkCode")
         }
-//        SimItem {
-//            title.text: simMng.serviceProviderName
-//            subtitle.text: "ServiceProviderName"
-//        }
+       // SimItem {
+       //     title.text: simMng.serviceProviderName
+       //     subtitle.text: i18n.tr("ServiceProviderName")
+       // }
 //        SimItem {
 //            title.text: JSON.stringify(simMng.serviceNumbers)
-//            subtitle.text: "ServiceNumbers"
+//            subtitle.text: i18n.tr("ServiceNumbers")
 //        }
-
-        Item {
-            height: units.gu(3)
-            width: parent.width
-        }
 
     }
 
@@ -90,8 +84,8 @@ Item {
         id: dialog
         Dialog {
             id: dialogue
-            title: "SubscriberNumber Change"
-            text: "Write your international phone number"
+            title: i18n.tr("SubscriberNumber Change")
+            text: i18n.tr("Insert your international phone number")
             property bool secondConfirmation: false
             Label {
                 id: feedbackText
@@ -112,18 +106,19 @@ Item {
                 spacing: units.gu(1)
                 Button {
                     width: parent.width/2 - row.spacing/2
-                    text: "Cancel"
+                    text: i18n.tr("Cancel")
                     onClicked: PopupUtils.close(dialogue)
                 }
                 Button {
                     width: parent.width/2 - row.spacing/2
-                    text: "Confirm"
+                    text: i18n.tr("Confirm")
                     color: UbuntuColors.green
                     onClicked: {
 
                        var phoneNumbers = PhoneNumber.PhoneUtils.matchInText(newNumber.text, getCountryCode())
                        if (phoneNumbers.length===0) {
-                           feedbackText.text = "Wrong number format"
+                           feedbackText.text = i18n.tr("Wrong number format")
+                           //TODO: add check if there is no + at the first position
                        } else {
 
                            if (secondConfirmation) {
@@ -131,8 +126,10 @@ Item {
                                PopupUtils.close(dialogue)
                            }else{
                                secondConfirmation = true
+                               dialogue.text=""
                                newNumber.enabled = false
-                               feedbackText.text = "Your phone seems OK, confirm again to write it"
+                               feedbackText.text = i18n.tr("Your phonenumber seems to be OK, confirm again to write it")
+                               feedbackText.wrapMode = Text.WordWrap
                                feedbackText.color = "green"
                            }
 

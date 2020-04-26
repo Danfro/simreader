@@ -43,34 +43,50 @@ MainView {
 
 
         Flickable {
-            contentHeight: simRepeater.contentHeight
+            contentHeight: simColumn.childrenRect.height
             anchors {
-                top: pageHeader.bottom
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
+                topMargin: pageHeader.height
+                fill: parent
             }
             clip: true
+            flickableDirection: Flickable.AutoFlickIfNeeded
 
+            Column {
+            id: simColumn
 
-
-            ListView {
-                id: simRepeater
                 anchors {
+                    top: parent.top
                     left: parent.left
                     right: parent.right
                 }
-               model: root.modems
-               // model: ["/ril_0","toto"]
-                delegate: Sim {
-                    //height: implicitHeight
-                    onHeightChanged: console.log("height:", height)
-                    simNb: index
-                    path: modelData
 
+                ListItem {
+                    width: parent.width
+                    height: simOne.height
+                    divider { visible: false; }
+
+                    Sim {
+                        id: simOne
+                        simNb: 0
+                        path: root.modems[0] !== undefined ? root.modems[0] : ""
+
+                    }
+                }
+
+                ListItem {
+                    width: parent.width
+                    height: simTwo.height
+                    divider { visible: false; }
+                    visible: root.modems[1] !== undefined ? true : false
+
+                    Sim {
+                        id: simTwo
+                        simNb: 1
+                        path: root.modems[1] !== undefined ? root.modems[1] : ""
+
+                    }
                 }
             }
-
         }
     }
 
@@ -79,8 +95,8 @@ MainView {
         onModemsChanged: {
             root.modems = modems.slice(0).sort()
             console.log("ofonoManager",modems.slice(0).sort() )
-            //root.createQML(modems.slice(0).sort())
+            console.log("path1: " + root.modems[0] )
+            console.log("path2: " + root.modems[1] )
         }
     }
-
 }
