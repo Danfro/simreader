@@ -78,11 +78,6 @@ Item {
 //            subtitle.text: i18n.tr("ServiceNumbers")
 //        }
 
-        Item {
-            height: units.gu(3)
-            width: parent.width
-        }
-
     }
 
     Component {
