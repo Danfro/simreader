@@ -43,6 +43,7 @@ Item {
         SimItem {
             color: UbuntuColors.blue
             title.text: "SIM #%1".arg(simNb+1)
+            title.color: theme.palette.normal.raised //always white to provide better contrast on blue background
         }
 
         SimItem {
