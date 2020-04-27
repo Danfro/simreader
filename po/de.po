@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simreader.lduboeuf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 20:27+0000\n"
-"PO-Revision-Date: 2020-04-26 22:28+0200\n"
+"POT-Creation-Date: 2020-04-27 11:18+0000\n"
+"PO-Revision-Date: 2020-04-27 13:28+0200\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -22,56 +22,58 @@ msgstr ""
 msgid "SimReader"
 msgstr "SimReader"
 
-#: ../qml/Sim.qml:45
+#: ../qml/Sim.qml:55
 msgid "SIM #%1"
 msgstr "SIM #%1"
 
-#: ../qml/Sim.qml:50 ../qml/Sim.qml:61 ../qml/Sim.qml:65 ../qml/Sim.qml:69
+#: ../qml/Sim.qml:60 ../qml/Sim.qml:71 ../qml/Sim.qml:75 ../qml/Sim.qml:79
 msgid "empty"
 msgstr "ohneEintrag"
 
-#: ../qml/Sim.qml:51
+#: ../qml/Sim.qml:61
 msgid "SubscriberNumber"
 msgstr "Registrierte Telefonnummer"
 
-#: ../qml/Sim.qml:56
+#: ../qml/Sim.qml:66
 msgid "change number"
 msgstr "Nummer ändern"
 
-#: ../qml/Sim.qml:62
+#: ../qml/Sim.qml:72
 msgid "SubscriberIdentity (IMSI)"
 msgstr "Internationale Mobilfunk-Teilnehmerkennung (IMSI)"
 
-#: ../qml/Sim.qml:66
+#: ../qml/Sim.qml:76
 msgid "MobileCountryCode (MCC)"
 msgstr "Ländercode (MCC)"
 
-#: ../qml/Sim.qml:70
-#, fuzzy
-#| msgid "MobileNetworkCode"
+#: ../qml/Sim.qml:80
 msgid "MobileNetworkCode (MNC)"
 msgstr "Mobilfunknetzkennzahl (MNC)"
 
-#: ../qml/Sim.qml:87
+#: ../qml/Sim.qml:84
+msgid "CardIdentifier (ICCID)"
+msgstr "SIM Seriennummer (ICCID)"
+
+#: ../qml/Sim.qml:97
 msgid "SubscriberNumber Change"
 msgstr "Änderung der reg. Nummer"
 
-#: ../qml/Sim.qml:88
+#: ../qml/Sim.qml:98
 msgid "Insert your international phone number"
 msgstr "Telefonnummer im internationalen Format eingeben"
 
-#: ../qml/Sim.qml:109
+#: ../qml/Sim.qml:122
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../qml/Sim.qml:114
+#: ../qml/Sim.qml:127
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: ../qml/Sim.qml:120
+#: ../qml/Sim.qml:134
 msgid "Wrong number format"
 msgstr "Falsches Nummernformat"
 
-#: ../qml/Sim.qml:131
+#: ../qml/Sim.qml:144
 msgid "Your phonenumber seems to be OK, confirm again to write it"
 msgstr "Die Telefonnummer schein ok zu sein, erneut bestätigen zum schreiben"

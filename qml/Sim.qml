@@ -132,7 +132,6 @@ Item {
                        var valid = phoneUtils.isPhoneNumber(newNumber.text) && newNumber.text[0] === "+"
                        if (!valid) {
                            feedbackText.text = i18n.tr("Wrong number format")
-                           //TODO: add check if there is no + at the first position
                        } else {
 
                            if (secondConfirmation) {
