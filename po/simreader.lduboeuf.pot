@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simreader.lduboeuf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 20:29+0000\n"
+"POT-Creation-Date: 2020-04-27 09:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,54 +21,54 @@ msgstr ""
 msgid "SimReader"
 msgstr ""
 
-#: ../qml/Sim.qml:45
+#: ../qml/Sim.qml:55
 msgid "SIM #%1"
 msgstr ""
 
-#: ../qml/Sim.qml:50 ../qml/Sim.qml:61 ../qml/Sim.qml:65 ../qml/Sim.qml:69
+#: ../qml/Sim.qml:60 ../qml/Sim.qml:71 ../qml/Sim.qml:75 ../qml/Sim.qml:79
 msgid "empty"
 msgstr ""
 
-#: ../qml/Sim.qml:51
+#: ../qml/Sim.qml:61
 msgid "SubscriberNumber"
 msgstr ""
 
-#: ../qml/Sim.qml:56
+#: ../qml/Sim.qml:66
 msgid "change number"
 msgstr ""
 
-#: ../qml/Sim.qml:62
+#: ../qml/Sim.qml:72
 msgid "SubscriberIdentity (IMSI)"
 msgstr ""
 
-#: ../qml/Sim.qml:66
+#: ../qml/Sim.qml:76
 msgid "MobileCountryCode (MCC)"
 msgstr ""
 
-#: ../qml/Sim.qml:70
+#: ../qml/Sim.qml:80
 msgid "MobileNetworkCode (MNC)"
 msgstr ""
 
-#: ../qml/Sim.qml:87
+#: ../qml/Sim.qml:97
 msgid "SubscriberNumber Change"
 msgstr ""
 
-#: ../qml/Sim.qml:88
+#: ../qml/Sim.qml:98
 msgid "Insert your international phone number"
 msgstr ""
 
-#: ../qml/Sim.qml:107
+#: ../qml/Sim.qml:122
 msgid "Cancel"
 msgstr ""
 
-#: ../qml/Sim.qml:112
+#: ../qml/Sim.qml:127
 msgid "Confirm"
 msgstr ""
 
-#: ../qml/Sim.qml:118
+#: ../qml/Sim.qml:134
 msgid "Wrong number format"
 msgstr ""
 
-#: ../qml/Sim.qml:128
+#: ../qml/Sim.qml:145
 msgid "Your phonenumber seems to be OK, confirm again to write it"
 msgstr ""

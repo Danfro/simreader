@@ -18,6 +18,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Telephony.PhoneNumber 0.1 as PhoneNumber
+import Ubuntu.Telephony 0.1
 
 import MeeGo.QOfono 0.2
 
@@ -34,7 +35,16 @@ Item {
     function getCountryCode() {
             var localeName = Qt.locale().name
             return localeName.substr(localeName.length - 2, 2)
-        }
+    }
+
+    PhoneUtils {
+        id: phoneUtils
+    }
+
+    OfonoSimManager {
+        id: simMng
+        modemPath: path
+    }
 
     Column {
         id:simInfoList
@@ -93,10 +103,15 @@ Item {
                 visible: text.length > 0
             }
 
-            TextField {
+            PhoneNumber.PhoneNumberField {
                 id: newNumber
-                placeholderText: "+33123232432"
-                text: (simMng.subscriberNumbers[0].length > 0) ? simMng.subscriberNumbers[0]: undefined
+                text: simMng.subscriberNumbers[0].length > 0 ? simMng.subscriberNumbers[0]: undefined
+                autoFormat: true
+                placeholderText: "+33 6 00 00 00 00"
+                defaultRegion: getCountryCode()
+                updateOnlyWhenFocused: false
+                inputMethodHints: Qt.ImhDialableCharactersOnly
+
             }
             Row {
                 id: row
@@ -113,13 +128,15 @@ Item {
                     color: UbuntuColors.green
                     onClicked: {
 
-                       var phoneNumbers = PhoneNumber.PhoneUtils.matchInText(newNumber.text, getCountryCode())
-                       if (phoneNumbers.length===0 || phoneNumbers[0]!=="+") {
+                       phoneUtils.setCountryCode(getCountryCode())
+                       var valid = phoneUtils.isPhoneNumber(newNumber.text) && newNumber.text[0] === "+"
+                       if (!valid) {
                            feedbackText.text = i18n.tr("Wrong number format")
+                           //TODO: add check if there is no + at the first position
                        } else {
 
                            if (secondConfirmation) {
-                               simMng.subscriberNumbers = phoneNumbers
+                               simMng.subscriberNumbers = [phoneUtils.normalizePhoneNumber(newNumber.text)]
                                PopupUtils.close(dialogue)
                            }else{
                                secondConfirmation = true
@@ -134,11 +151,6 @@ Item {
                 }
             }
         }
-    }
-
-    OfonoSimManager {
-        id: simMng
-        modemPath: path
     }
 }
 //Q_PROPERTY(bool present READ present NOTIFY presenceChanged)
