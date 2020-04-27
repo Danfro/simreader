@@ -3,72 +3,75 @@
 # This file is distributed under the same license as the simreader.lduboeuf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: simreader.lduboeuf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 20:29+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2020-04-26 20:27+0000\n"
+"PO-Revision-Date: 2020-04-26 22:28+0200\n"
+"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../qml/Main.qml:41 simreader.desktop.in.h:1
 msgid "SimReader"
-msgstr ""
+msgstr "SimReader"
 
 #: ../qml/Sim.qml:45
 msgid "SIM #%1"
-msgstr ""
+msgstr "SIM #%1"
 
 #: ../qml/Sim.qml:50 ../qml/Sim.qml:61 ../qml/Sim.qml:65 ../qml/Sim.qml:69
 msgid "empty"
-msgstr ""
+msgstr "ohneEintrag"
 
 #: ../qml/Sim.qml:51
 msgid "SubscriberNumber"
-msgstr ""
+msgstr "Registrierte Telefonnummer"
 
 #: ../qml/Sim.qml:56
 msgid "change number"
-msgstr ""
+msgstr "Nummer ändern"
 
 #: ../qml/Sim.qml:62
 msgid "SubscriberIdentity (IMSI)"
-msgstr ""
+msgstr "Internationale Mobilfunk-Teilnehmerkennung (IMSI)"
 
 #: ../qml/Sim.qml:66
 msgid "MobileCountryCode (MCC)"
-msgstr ""
+msgstr "Ländercode (MCC)"
 
 #: ../qml/Sim.qml:70
+#, fuzzy
+#| msgid "MobileNetworkCode"
 msgid "MobileNetworkCode (MNC)"
-msgstr ""
+msgstr "Mobilfunknetzkennzahl (MNC)"
 
 #: ../qml/Sim.qml:87
 msgid "SubscriberNumber Change"
-msgstr ""
+msgstr "Änderung der reg. Nummer"
 
 #: ../qml/Sim.qml:88
 msgid "Insert your international phone number"
-msgstr ""
+msgstr "Telefonnummer im internationalen Format eingeben"
 
-#: ../qml/Sim.qml:107
+#: ../qml/Sim.qml:109
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
-#: ../qml/Sim.qml:112
+#: ../qml/Sim.qml:114
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
-#: ../qml/Sim.qml:118
+#: ../qml/Sim.qml:120
 msgid "Wrong number format"
-msgstr ""
+msgstr "Falsches Nummernformat"
 
-#: ../qml/Sim.qml:128
+#: ../qml/Sim.qml:131
 msgid "Your phonenumber seems to be OK, confirm again to write it"
-msgstr ""
+msgstr "Die Telefonnummer schein ok zu sein, erneut bestätigen zum schreiben"
