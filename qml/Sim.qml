@@ -79,10 +79,10 @@ Item {
             title.text: simMng.mobileNetworkCode === undefined ? i18n.tr("empty") : simMng.mobileNetworkCode
             subtitle.text: i18n.tr("MobileNetworkCode (MNC)")
         }
-       // SimItem {
-       //     title.text: simMng.serviceProviderName
-       //     subtitle.text: i18n.tr("ServiceProviderName")
-       // }
+        SimItem {
+            title.text: simMng.cardIdentifier
+            subtitle.text: i18n.tr("CardIdentifier (ICCID)")
+        }
 //        SimItem {
 //            title.text: JSON.stringify(simMng.serviceNumbers)
 //            subtitle.text: i18n.tr("ServiceNumbers")

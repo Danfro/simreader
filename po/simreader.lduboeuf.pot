@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simreader.lduboeuf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 09:10+0000\n"
+"POT-Creation-Date: 2020-04-27 09:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,6 +47,10 @@ msgstr ""
 
 #: ../qml/Sim.qml:80
 msgid "MobileNetworkCode (MNC)"
+msgstr ""
+
+#: ../qml/Sim.qml:84
+msgid "CardIdentifier (ICCID)"
 msgstr ""
 
 #: ../qml/Sim.qml:97
