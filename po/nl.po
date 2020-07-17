@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the simreader.lduboeuf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: simreader.lduboeuf\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-27 09:57+0000\n"
+"PO-Revision-Date: 2020-07-16 17:54+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: ../qml/Main.qml:41 simreader.desktop.in.h:1
+msgid "SimReader"
+msgstr "Simlezer"
+
+#: ../qml/Sim.qml:55
+msgid "SIM #%1"
+msgstr "Simkaart #%1"
+
+#: ../qml/Sim.qml:60 ../qml/Sim.qml:71 ../qml/Sim.qml:75 ../qml/Sim.qml:79
+msgid "empty"
+msgstr "leeg"
+
+#: ../qml/Sim.qml:61
+msgid "SubscriberNumber"
+msgstr "Abonneenummer"
+
+#: ../qml/Sim.qml:66
+msgid "change number"
+msgstr "nummer aanpassen"
+
+#: ../qml/Sim.qml:72
+msgid "SubscriberIdentity (IMSI)"
+msgstr "Abonnee-identiteit (IMSI)"
+
+#: ../qml/Sim.qml:76
+msgid "MobileCountryCode (MCC)"
+msgstr "Mobiele landcode (MCC)"
+
+#: ../qml/Sim.qml:80
+msgid "MobileNetworkCode (MNC)"
+msgstr "Mobiele netwerkcode (MNC)"
+
+#: ../qml/Sim.qml:84
+msgid "CardIdentifier (ICCID)"
+msgstr "Kaartidentificatie (ICCID)"
+
+#: ../qml/Sim.qml:97
+msgid "SubscriberNumber Change"
+msgstr "Abonneenummer aanpassen"
+
+#: ../qml/Sim.qml:98
+msgid "Insert your international phone number"
+msgstr "Voer je internationale telefoonnummer in"
+
+#: ../qml/Sim.qml:122
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../qml/Sim.qml:127
+msgid "Confirm"
+msgstr "Bevestigen"
+
+#: ../qml/Sim.qml:134
+msgid "Wrong number format"
+msgstr "Onjuiste nummeropmaak"
+
+#: ../qml/Sim.qml:145
+msgid "Your phonenumber seems to be OK, confirm again to write it"
+msgstr "Je telefoonnummer lijkt in orde - bevestig opnieuw om weg te schrijven"
